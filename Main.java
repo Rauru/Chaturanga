@@ -1,8 +1,10 @@
 package chaturanga;
 import java.util.Scanner;
 public class Main{
-	static int turno=1;
-	static void validarturno(){
+	
+        static int turno=1;
+	
+        static void validarturno(){
 		
 		if(turno==1){
 			turno++;
@@ -29,7 +31,7 @@ public class Main{
 				op=sc.nextInt();
 				if(op==1){
 				tb.ordenarpiezas();
-				tb.imprimirtbl();
+				//tb.imprimirtbl();
 					do{
 						
 						
@@ -46,20 +48,22 @@ public class Main{
 						System.out.println("Selecione una pieza a mover");
 						x=sc.nextInt();
 						y=sc.nextInt();
-						System.out.println("Selecione un espacio a mover");
+						                                     // System.out.println(tb.tbl[x][y].codigo);
+                                                System.out.println("Selecione un espacio a mover");
 						xmover=sc.nextInt();
 						ymover=sc.nextInt();
-//			tb.tbl[x][y].validarmovimiento(xmover,ymover);
-                                                if(tb.tbl[x][y].codigo==turno){
-                                                    if (tb.tbl[x][y].validarmovimiento(xmover,ymover)){
-                                                        tb.tbl[xmover][ymover]=tb.tbl[x][y];
-                                                        tb.tbl[x][y]=null;
+                                                
+
+                                                if(tablero.tbl[x][y].codigo==turno){
+                                                    if (tablero.tbl[x][y].validarmovimiento(xmover,ymover)){
+                                                        tablero.tbl[xmover][ymover]=tablero.tbl[x][y];
+                                                        tablero.tbl[x][y]=null;
                                                         validarturno();
                                                     }
                                                }else{
-                                                    System.out.println("Esta moviendo una fichaa que no le corresponde");
+                                                    System.out.println("Esta moviendo una ficha que no le corresponde");
                                                }
-					}while(tb.ganar==0);
+					}while(tablero.ganar==0);
 				}else if(op==2){
 				break;
 		

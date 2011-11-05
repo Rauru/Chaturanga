@@ -21,6 +21,10 @@ public class pieza{
 		
 	
 	}
+//        public pieza(int x, int y,){
+//        
+//        }
+        
 	public boolean activo(){
 		return true;
 	}
@@ -45,7 +49,10 @@ public class pieza{
 	public boolean validarmovimiento(int x, int y){
 	return false;
 	}
-	
+	public boolean validarsalto(){
+            return true;
+        }
+        
 	void imprimir(){
 		System.out.print(x+y);
 	}

@@ -8,13 +8,20 @@ public class torre extends pieza{
 	}
 	
 	
-	public boolean validarmoviemiento(int xintint,int y){
+	public boolean validarmoviemiento(int xint,int y){
 		if(xint==x&&yint!=y){
-			return true;
+                    y=yint;
+                    return true;
 		}else if(xint!=x&&yint==y){
-			return true;
+                    x=xint;
+                    return true;
 		}else{return false;}
 	}
+        
+    @Override
+        public boolean validarsalto(int xint,int yint){
+            
+        }
 	
 }
 

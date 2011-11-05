@@ -57,53 +57,7 @@ package chaturanga;
 		}
 	}
 	
-//	void imprimiractualisado(){
-//	int x2;
-//	int y2;
-//		for(int y=1;y<5;y++){
-//			for(int x=1;x<9;x++){
-//				if(tbl[x][y]!=null){
-//					tbl2[x][y]=tbl[x][y];
-//				}
-//			}
-//		}
-//		for(int y=1;y<5;y++){
-//			for(int x=1;x<9;x++){
-//				if(tbl2[x][y]!=null){
-//					x2=tbl2[x][y].x;
-//					y2=tbl2[x][y].y;
-//					tbl3[x2][y2]=tbl2[x][y];
-//				}
-//			}
-//		}
-//	}
-//	void imprimirtbl2(){
-//		imprimiractualisado();
-//		validarganador();
-//		if(validarganador()){
-//			for(int y=0;y<9;y++){
-//				System.out.println("");
-//				for(int x=0;x<9;x++){
-//					if(x==0&&y==0){
-//						System.out.print(" ");
-//					}else if(y==0){
-//						System.out.print(x+" ");
-//					}else if(x==0){
-//						System.out.print(y);
-//					}else if(tbl3[x][y]==null){
-//						System.out.print("--");
-//
-//					}else if(tbl3[x][y]!=null){
-//						tbl3[x][y].imprimir();
-//
-//
-//
-//
-//					}
-//				}
-//			}
-//		}else{System.out.print("el juego ah terminado");}
-//	}
+
 	
 	void imprimirtbl(){
 
