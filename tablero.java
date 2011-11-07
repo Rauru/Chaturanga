@@ -30,10 +30,10 @@ package chaturanga;
 					tbl[x][y]=new caballo(x,y," C");
 					tbl[x][y].color();
 				}else if(y==1&&x==3||y==8&&x==3||y==1&&x==6||y==8&&x==6){
-					tbl[x][y]=new alfil(x,y," A");
+					tbl[x][y]=new elefante(x,y," E");
 					tbl[x][y].color();
 				}else if(y==1&&x==4||y==8&&x==4){
-					tbl[x][y]= new dama(x,y," D");
+					tbl[x][y]= new visir(x,y," V");
 					tbl[x][y].color();
 				}else if(y==1&&x==5||y==8&&x==5){
 					tbl[x][y]= new rey(x,y," R");

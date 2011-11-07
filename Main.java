@@ -56,9 +56,8 @@ public class Main{
 
                                                 if(tablero.tbl[x][y].codigo==turno){
                                                     if (tablero.tbl[x][y].validarmovimiento(xmover,ymover)){
-                                                        tablero.tbl[xmover][ymover]=tablero.tbl[x][y];
-                                                        tablero.tbl[x][y]=null;
-                                                        validarturno();
+                                                        if(x){
+                                                        }
                                                     }
                                                }else{
                                                     System.out.println("Esta moviendo una ficha que no le corresponde");
