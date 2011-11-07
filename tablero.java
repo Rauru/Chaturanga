@@ -1,19 +1,10 @@
 package chaturanga;
   public class tablero{
 	 static pieza [][] tbl = new pieza[9][9];
-	//pieza [][] tbl2 = new pieza[9][5];
-//	pieza [][] tbl3 = new pieza[9][9];
-	jugador[] jugadores = new jugador[2];
-	jugador jg = new jugador();
+         
+	
 	static int ganar=0;
 	public tablero(){}
-	
-	
-	void incluirjugadores(String n, int nj){
-		for(int cont=0;cont<jugadores.length;cont++){
-			jugadores[cont]= new jugador(n,nj);
-		}
-	}
 		
 	
 	
@@ -46,15 +37,6 @@ package chaturanga;
 
 					
 			
-	}
-		
-	boolean validarganador(){
-		if(jg.validarganador()){
-			return true;
-		}else{
-			ganar=1;
-			return false;
-		}
 	}
 	
 
