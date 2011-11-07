@@ -12,15 +12,17 @@ public class Main{
 			turno--;
 		}
 	}
-	 static jugador[] jugadores = new jugador[2];
+	 
 	
-         static void incluirjugadores(String n1, String n2){
-            jugadores[0]=new jugador(n1);
-            jugadores[0]=new jugador(n1);
-        }
+//         void incluirjugadores(String n1, String n2){
+//            jugadores[0]=new jugador(n1);
+//            jugadores[0]=new jugador(n1);
+//        }
          
          public static void main(String arg[]){
-		
+                jugador[] jugadores = new jugador[2];
+                int puntuacion1=0;
+                int puntuacion2=0;
 		tablero tb= new tablero();
 		Scanner sc = new Scanner (System.in);
 		int op=0;
@@ -31,7 +33,7 @@ public class Main{
 			do{
 				
 				System.out.println("Elija una opcion");
-				System.out.println("1.Jugar ajedrez");
+				System.out.println("1.Jugar chaturanga");
 				System.out.println("2.ranking");
 				System.out.println("3.Salir");
 				op=sc.nextInt();
@@ -39,13 +41,16 @@ public class Main{
 				tb.ordenarpiezas();
 				//tb.imprimirtbl();
 					
-                                System.out.println("Ingrese nombre del jugador 1");
+                                            System.out.println("Ingrese nombre del jugador 1");
                                             
-                                            String n1=sc.nextLine();
+                                            String no1=sc.next();
                                             
                                             System.out.println("Ingrese nombre del jugador 2");
-                                            String n2=sc.nextLine();
-                                            incluirjugadores(n1, n2);
+                                            String no2=sc.next();
+                                           // incluirjugadores(no1, no2);
+                                            //jugadores[0].nombre=no1;
+                                            //jugadores[1].nombre=no2;
+                                            //.out.println(jugadores[0].nombre+jugadores[1].nombre);
                                 do{
                                             
                                             
@@ -54,11 +59,10 @@ public class Main{
 						
                                                 System.out.println("");
                                                 if(turno==1){
-                                                    System.out.println("es el turno del jugador "+jugadores[0].nombre);
+                                                    System.out.println("es el turno del jugador "+no1);
                                                     
                                                 }else{
-                                                    System.out.println("es el turno del jugador "+jugadores[1].nombre);
-                                                    
+                                                    System.out.println("es el turno del jugador "+no2);
                                                 }
 						System.out.println("Selecione una pieza a mover");
 						x=sc.nextInt();
@@ -90,26 +94,31 @@ public class Main{
                                                                 ||ymover>9){
                                                             System.out.println("coordenadas incorrectas");
                                                         }
-                                                    }else if (tablero.tbl[x][y].validarmovimiento(xmover,ymover)){
                                                         if(tablero.tbl[xmover][ymover]!=null){
                                                             if(tablero.tbl[xmover][ymover].codigo==1){
-                                                                jugadores[0].puntuacion+=1;
+                                                                puntuacion1+=1;
                                                             }else{
-                                                                jugadores[0].puntuacion+=1;
+                                                                puntuacion2+=1;
+                                                            }
+                                                        }
+                                                        if(tablero.tbl[xmover][ymover]instanceof rey){
+                                                            if(tablero.tbl[xmover][ymover].codigo==1){
+                                                                puntuaciones.agregarp(no1, no2,puntuacion1);
+                                                                tablero.ganar=1;
+                                                            }else{
+                                                                puntuaciones.agregarp(no2, no1,puntuacion2);
+                                                                tablero.ganar=2;
                                                             }
                                                         }
                                                         tablero.tbl[xmover][ymover]=tablero.tbl[x][y];
                                                         tablero.tbl[x][y]=null;
                                                         
                                                         
-                                                        if(tablero.tbl[xmover][ymover]instanceof rey){
-                                                            if(tablero.tbl[xmover][ymover].codigo==1){
-                                                                puntuaciones.agregarp(n1, n2,jugadores[0].puntuacion);
-                                                            }else{
-                                                                puntuaciones.agregarp(n2, n1,jugadores[1].puntuacion);
-                                                            }
-                                                        }
+                                                        
                                                         validarturno();
+                                                    
+                                                    }else{
+                                                        System.out.println("Movimiento no Valido");
                                                     }
 
                                                }else{

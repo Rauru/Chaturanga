@@ -15,14 +15,14 @@ public class torre extends pieza{
                     if(tablero.tbl[xint][yint]!=null){
                         if(tablero.tbl[xint][yint].codigo!=this.codigo){
                             y=yint;
-                            return true;
+                            return validarsalto(xint, yint);
                         }
                     }
 		}else if(xint!=x&&yint==y){
                     if(tablero.tbl[xint][yint]!=null){
                         if(tablero.tbl[xint][yint].codigo!=this.codigo){
                             x=xint;
-                            return true;
+                            return validarsalto(xint, yint);
                         }
                     }
 		}
