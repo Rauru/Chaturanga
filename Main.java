@@ -38,13 +38,17 @@ public class Main{
 				if(op==1){
 				tb.ordenarpiezas();
 				//tb.imprimirtbl();
-					do{
+					
+                                System.out.println("Ingrese nombre del jugador 1");
                                             
-                                            System.out.println("Ingrese nombre del jugador 1");
                                             String n1=sc.nextLine();
+                                            
                                             System.out.println("Ingrese nombre del jugador 2");
                                             String n2=sc.nextLine();
                                             incluirjugadores(n1, n2);
+                                do{
+                                            
+                                            
                                             
 						tb.imprimirtbl();
 						
